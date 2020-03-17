@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Zulu - Metin2 PayPal Payment Gateway [M.P.P.G] v1.0</title>
+    <title>Zulu | Episode 1 - Metin2 PayPal Payment Gateway [M.P.P.G] v1.0</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:600&display=swap" rel="stylesheet">
@@ -64,9 +64,9 @@
                         <label for="prices">Amount</label>
                         <select class="form-control" name="amount" id="prices">
                             <option selected disabled>Select Price and Amount</option>
-                            <option value="1">200 Coins - 10€</option>
-                            <option value="2">400 Coins - 20€</option>
-                            <option value="3">400 Coins - 30€</option>
+                            <?php foreach($parameters['costs'] as $key => $value): ?>
+                                <option value="<?=$key?>"><?=$value?> Coins - <?=$key?>€</option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
 
