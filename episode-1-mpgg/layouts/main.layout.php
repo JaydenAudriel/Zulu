@@ -34,26 +34,22 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 mx-auto">
-                <form class="gateway-form text-center" action="#">
+                <form class="gateway-form text-center" action="<?=$ipn->getPaypalUri()?>">
 
-                    <input type="hidden" name="business" value="" />
-                    <input type="hidden" name="notify_url" value="" />
-                    <input type="hidden" name="cancel_return" value="" />
-                    <input type="hidden" name="return" value="" />
+                    <input type="hidden" name="business" value="<?=$parameters['paypal_email']?>" />
+                    <input type="hidden" name="notify_url" value="<?=$parameters['ipn_script']?>" />
+                    <input type="hidden" name="cancel_return" value="<?=$parameters['return_error']?>" />
+                    <input type="hidden" name="return" value="<?=$parameters['return_success']?>" />
                     <input type="hidden" name="rm" value="2" />
                     <input type="hidden" name="lc" value="" />
                     <input type="hidden" name="no_shipping" value="1" />
                     <input type="hidden" name="no_note" value="1" />
-                    <input type="hidden" name="currency_code" value="USD" />
+                    <input type="hidden" name="currency_code" value="<?=$parameters['currency_code']?>" />
                     <input type="hidden" name="page_style" value="paypal" />
                     <input type="hidden" name="charset" value="utf-8" />
                     <input type="hidden" name="item_name" value="HeadPhone" />
                     <input type="hidden" name="cbt" value="Back to FormGet" />
                     <input type="hidden" value="_xclick" name="cmd" />
-                    <input type="hidden" name="amount" value="80" />
-
-                    <script>toastr.success('We do have the Kapua suite available.', 'Turtle Bay Resort', {timeOut: 5000})</script>
-
 
                     <div class="form-group">
                         <label for="username">Username</label>
@@ -85,7 +81,7 @@
     <footer>
         <div class="container">
             <div class="col-md-12 text-center">
-                Copyright @ <?= date('Y') ?> LESOFT. All rights reserved.
+                Copyright @ <?= date('Y') ?> <?= $parameters['server_name'] ?>. All rights reserved.
             </div>
         </div>
     </footer>
