@@ -23,7 +23,7 @@ body {
 }
 
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     padding: 20px;
     width: 100%;

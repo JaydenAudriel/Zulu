@@ -1,5 +1,0 @@
-<form name="myform" action="<?php echo $paypal_url;?>" method="post">
-<input type="hidden" name="business" value="<?php echo $merchant_email;?>" />
-<input type="hidden" name="notify_url" value="<?php echo $notify_url;?>" />
-<input type="hidden" name="cancel_return" value="<?php echo $cancel_return;?>" />
-<input type="hidden" name="return" value="<?php echo $success_return;?>" />

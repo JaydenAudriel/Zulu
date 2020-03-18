@@ -1,4 +1,10 @@
 <?php namespace Listener;
+//Check if database config file exists, is not it means you need to install the script from zero :)
+if(!file_exists('./config/database.php')){
+    header("location: ./install/requirements.php");
+    die();
+}
+
 //Database
 require_once './config/database.php';
 
@@ -10,8 +16,7 @@ include './vendor/PaypalIPN.php';
 
 use PaypalIPN;
 $ipn = new PaypalIPN();
-$ipn->useSandbox();
 
 
 //View
-require_once './layouts/main.layout.php';
+require_once './templates/main.template.php';

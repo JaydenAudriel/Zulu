@@ -34,8 +34,21 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 mx-auto">
-                <form class="gateway-form text-center" action="<?=$ipn->getPaypalUri()?>">
 
+                <?php if(isset($_GET['install']) && $_GET['install'] == 'success'): ?>
+                    <!-- \.Success Alert after Installation -->
+                    <div class="alert alert-success" role="alert">
+                        <h3 class="text-success">SUCCESS!</h3>
+                        <p class="text-success">If you're watching this alert it means you've installed the script correctly.</p>
+                        <p class="text-muted">Redirecting in 3 seconds.</p>
+                    </div>
+                    <!-- Redirect to clean index -->
+                <?php header('refresh:3;url=./') ?>
+                    <!-- Success Alert after Installation./ -->
+                <?php endif; ?>
+
+                <!-- \.Form -->
+                <form class="gateway-form text-center" method="POST" action="<?=$ipn->getPaypalUri()?>">
                     <input type="hidden" name="business" value="<?=$parameters['paypal_email']?>" />
                     <input type="hidden" name="notify_url" value="<?=$parameters['ipn_script']?>" />
                     <input type="hidden" name="cancel_return" value="<?=$parameters['return_error']?>" />
@@ -47,13 +60,13 @@
                     <input type="hidden" name="currency_code" value="<?=$parameters['currency_code']?>" />
                     <input type="hidden" name="page_style" value="paypal" />
                     <input type="hidden" name="charset" value="utf-8" />
-                    <input type="hidden" name="item_name" value="HeadPhone" />
+                    <input type="hidden" name="item_name" value="Coins" />
                     <input type="hidden" name="cbt" value="Back to FormGet" />
                     <input type="hidden" value="_xclick" name="cmd" />
 
                     <div class="form-group">
                         <label for="username">Username</label>
-                        <input class="form-control" type="text" name="username" id="username" placeholder="Your username..." required>
+                        <input class="form-control" type="text" name="custom" id="username" placeholder="Your username..." required>
                     </div>
 
                     <div class="form-group">
@@ -72,20 +85,22 @@
                         </button>
                     </div>
                 </form>
+                <!-- Form./ -->
+
             </div>
         </div>
     </div>
     <!-- Content./ -->
 
     <!-- \.Footer -->
-    <footer>
+    <footer class="pt-5">
         <div class="container">
             <div class="col-md-12 text-center">
-                Copyright @ <?= date('Y') ?> <?= $parameters['server_name'] ?>. All rights reserved.
+                Copyright @ <?= date('Y') ?> - <?= $parameters['server_name'] ?>. All rights reserved.
             </div>
         </div>
     </footer>
-    <!-- Content./ -->
+    <!-- Footer./ -->
 
 </body>
 

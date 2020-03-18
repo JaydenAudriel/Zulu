@@ -8,9 +8,9 @@ class PaypalIPN
     private $use_local_certs = true;
 
     /** Production Postback URL */
-    const VERIFY_URI = 'https://ipnpb.paypal.com/cgi-bin/webscr';
+    const VERIFY_URI = 'https://www.paypal.com/cgi-bin/webscr';
     /** Sandbox Postback URL */
-    const SANDBOX_VERIFY_URI = 'https://ipnpb.sandbox.paypal.com/cgi-bin/webscr';
+    const SANDBOX_VERIFY_URI = 'https://www.sandbox.paypal.com/cgi-bin/webscr';
 
     /** Response from PayPal indicating validation was successful */
     const VALID = 'VERIFIED';
