@@ -24,7 +24,6 @@ return [
     'paypal_email' => 'your_paypal_email',
 
 
-
     /*
     |--------------------------------------------------------------------------
     | PayPal IPN Script URL
@@ -34,8 +33,7 @@ return [
     | By default: /zulu/app.php
     |
     */
-    'ipn_script' => $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/zulu/app.php',
-
+    'ipn_script' => $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/zulu/app.php',
 
 
     /*
@@ -50,9 +48,8 @@ return [
     | By default for errors: error.php
     |
     */
-    'return_success' => $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/zulu/success.php',
-    'return_error' => $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/zulu/error.php',
-
+    'return_success' => $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/zulu/success.php',
+    'return_error' => $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/zulu/error.php',
 
 
     /*
@@ -72,7 +69,6 @@ return [
     ],
 
 
-
     /*
     |--------------------------------------------------------------------------
     | Currency Code
@@ -86,8 +82,6 @@ return [
     |
     */
     'currency_code' => 'USD',
-
-
 
 
 ];

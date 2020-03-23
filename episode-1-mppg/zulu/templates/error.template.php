@@ -9,7 +9,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:600&display=swap" rel="stylesheet">
-    
+
     <!-- Vendors -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/toastr.min.css">
@@ -23,29 +23,29 @@
 </head>
 
 <body>
-    
-    <!-- \.Header -->
-    <header class="text-center py-5">
-        <img src="assets/img/logo.png" class="img-fluid" alt="logo">
-    </header>
-    <!-- Header./ -->
 
-    <!-- \.Content -->
-   <div class="alert alert-success" role="alert">
-		<h3 class="text-success">ERROR!</h3>
-		<p class="text-success">Something is wrong, please contact with the Sysadmin.</p>
-    </div>
-    <!-- Content./ -->
+<!-- \.Header -->
+<header class="text-center py-5">
+    <img src="assets/img/logo.png" class="img-fluid" alt="logo">
+</header>
+<!-- Header./ -->
 
-    <!-- \.Footer -->
-    <footer class="pt-5">
-        <div class="container">
-            <div class="col-md-12 text-center">
-                Copyright @ <?= date('Y') ?> - <?= $parameters['server_name'] ?>. All rights reserved.
-            </div>
+<!-- \.Content -->
+<div class="alert alert-danger" role="alert">
+    <h3 class="text-danger">ERROR!</h3>
+    <p class="text-danger">Something is wrong, please contact with the Sysadmin.</p>
+</div>
+<!-- Content./ -->
+
+<!-- \.Footer -->
+<footer class="pt-5">
+    <div class="container">
+        <div class="col-md-12 text-center">
+            Copyright @ <?= date('Y') ?> All rights reserved.
         </div>
-    </footer>
-    <!-- Footer./ -->
+    </div>
+</footer>
+<!-- Footer./ -->
 
 </body>
 

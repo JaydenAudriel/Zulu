@@ -1,6 +1,6 @@
 <?php namespace Listener;
 //Check if database config file exists, is not it means you need to install the script from zero :)
-if(!file_exists('./config/database.php')){
+if (!file_exists('./config/database.php')) {
     header("location: ./install/requirements.php");
     die();
 }
@@ -15,8 +15,8 @@ $parameters = include './config/parameters.php';
 include './vendor/PaypalIPN.php';
 
 use PaypalIPN;
-$ipn = new PaypalIPN();
 
+$ipn = new PaypalIPN();
 
 //View
 require_once './templates/main.template.php';
