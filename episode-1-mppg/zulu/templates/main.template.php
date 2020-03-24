@@ -77,7 +77,7 @@
                     <select class="form-control" name="amount" id="prices">
                         <option selected disabled>Select Price and Amount</option>
                         <?php foreach ($parameters['costs'] as $key => $value): ?>
-                            <option value="<?= $key ?>"><?= $value ?> Coins - <?= $key ?>$parameters['currency_code']
+                            <option value="<?= $key ?>"><?= $value ?> Coins - <?= $key.' '.$parameters['currency_code'] ?>
                             </option>
                         <?php endforeach; ?>
                     </select>

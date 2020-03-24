@@ -13,7 +13,7 @@ use PaypalIPN;
 $ipn = new PaypalIPN();
 $verified = $ipn->verifyIPN();
 if ($verified) {
-    if ($_POST['bussines' == $parameters['paypal_email']]) {
+    if ($_POST['receiver_email'] == $parameters['paypal_email']) {
         $data = [
             'item_name' => $_POST['item_name'],
             'txn_id' => $_POST['txn_id'],
