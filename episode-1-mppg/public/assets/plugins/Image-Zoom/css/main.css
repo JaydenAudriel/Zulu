@@ -1,0 +1,128 @@
+.show.image-zoom{
+  width: 300px;
+  z-index: 1;
+  text-align: center;
+  margin: 2rem auto;
+  height:250px;
+}
+.show.image-zoom#show-img{
+  height:400px;
+  width:100%;
+}
+.small-container img{
+	
+}
+.image-zoom-container img{
+	max-width:initial !important;
+}
+.image-zoom-container{
+	margin: 30px 19px 30px 30px;
+    border: 1px solid #e8ebf3;
+}
+*::-ms-backdrop, .image-zoom-container img{
+	max-width:inherit !important;
+}
+*::-ms-backdrop .show.image-zoom{
+  width: 400px;
+  height: 400px;
+  z-index:1;
+}
+#show-img { 
+  height:400px;
+  width:100%; 
+  }
+.small-img{
+  height: 137px;
+  margin-top: 30px;
+  position: relative;
+  border-top: 1px solid #e8ebf3;
+}
+.small-img .icon-left, .small-img .icon-right{
+  width: 12px;
+  height: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.small-img .icon-left{
+  transform: rotate(180deg);
+   left: 45px;
+}
+.small-img .icon-right{
+  right: 45px;
+}
+.small-img .icon-left:hover, .small-img .icon-right:hover{
+  opacity: .5;
+}
+.small-container{
+  width: 317px;
+  height: 70px;
+  overflow: hidden;
+  position: absolute;
+  margin: 34px auto;
+  left: 70px;
+  right: 70px;
+}
+.small-container div{
+  width: 800%;
+  position: relative;
+}
+
+.small-container .show-small-img{
+  width: 70px;
+  height: 70px;
+  margin-right: 4px;
+  margin-left: 4px;
+  cursor: pointer;
+  float: left;
+}
+.small-container .show-small-img:last-of-type{
+  margin-right: 0;
+}
+@media(max-width:1024px)and (min-width:768px){
+	.small-container{
+		  width: 239px !important;
+		  height: 70px;
+		  overflow: hidden;
+	}
+}
+@media(max-width:767px)and (min-width:567px){
+	.small-container{
+	  width: 300px !important;
+	  height: 70px;
+	  overflow: hidden;
+	}
+}
+@media(max-width:566px)and (min-width:480px){
+	.small-container{
+	  width: 238px !important;
+	  height: 70px;
+	  overflow: hidden;
+	}
+}
+@media(max-width:565px) and  (min-width:319px){
+	.small-container{
+	  width:160px !important;
+	  height: 70px;
+	  overflow: hidden;
+	}
+	.show.image-zoom {
+		width: 269px;
+		text-align: center;
+		height: 359px;
+	}
+}
+@media(max-width:565px) {
+	.show.image-zoom {
+		width: 200px;
+		text-align: center;
+		height: 359px;
+	}
+	.small-container{
+	  width:80px !important;
+	  height: 70px;
+	  overflow: hidden;
+	}
+}

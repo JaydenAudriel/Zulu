@@ -1,0 +1,38 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options All -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+    # Deny Access to Hidden Files and Directories
+	RewriteCond %{SCRIPT_FILENAME} -d [OR]
+	RewriteCond %{SCRIPT_FILENAME} -f
+	RewriteRule "(^|/)\." - [F]
+
+	# Deny Access to Important Files
+	<FilesMatch "(\.(db|json|yml|md|lock|bak|config|dist|fla|inc|ini|log|psd|sh|sql|swp|xml)|~)$">
+		## Apache 2.2
+		Order allow,deny
+		Deny from all
+		Satisfy All
+
+		## Apache 2.4
+		# Require all denied
+	</FilesMatch>
+
+</IfModule>

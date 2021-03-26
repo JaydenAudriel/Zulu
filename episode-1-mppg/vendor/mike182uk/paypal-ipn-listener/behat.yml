@@ -1,0 +1,8 @@
+default:
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+    listener_builder:
+      contexts:
+        - GuzzleArrayListenerBuilderContext
