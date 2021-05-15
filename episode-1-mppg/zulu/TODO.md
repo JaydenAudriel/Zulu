@@ -3,6 +3,7 @@ Patches for performance improvements and dependency fixes
 
 ## Todo
 - [ ]  Refactorize Eloquent Interactions #patch
+- [ ]  Change .env to Config #patch
 
 ## In Progress
 
